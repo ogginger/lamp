@@ -2,7 +2,7 @@ This docker container is a lamp monolith intended for development use.
 
 The container is intended to be spun up, setup, and left up but 
 has a very quick turn over period. When the container is initially run, 
-you must enter shell within it and run the script install_mysql located
+you must enter a shell within it and run the script install_mysql located
 in the /home/.config directory.
 
 There is also a script for starting the lamp services in the /home/.config
@@ -16,3 +16,5 @@ the lamp container via the host's IP address using port 2022.
 The container's volume /var/www/html is hosted in the current directory's
 /html/ directory. To add files to the web server you can just drop them 
 into /html to see changes take affect.  
+
+The mysql root password is "root_password".

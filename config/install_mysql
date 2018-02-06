@@ -1,0 +1,28 @@
+#!/usr/bin/expect -f
+
+#This script automatically installs mysql-server.
+#It is intended to be run in a docker container and
+#initialized when the container runs.
+
+set timeout 120
+
+spawn apt-get install -y mysql-server
+
+#expect "More" {
+#	send "\r"
+#	puts "Sent Enter."
+#}	
+
+expect "user" {
+	send "root_password\r"
+	puts "Sent password"
+	expect "user" {
+			send "root_password\r"
+			puts "Confirmed password!"
+	}	
+}
+
+
+expect "Processing triggers for systemd" {
+	puts "\nDone."
+}

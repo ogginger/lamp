@@ -7,7 +7,10 @@ libapache2-mod-php7.0 \
 sudo \
 nano \
 openssh-server \
-expect
+expect \
+nodejs \
+git \
+npm
 
 expose 80
 expose 22

@@ -1,6 +1,4 @@
 #!/bin/bash
 
-./remove_lamp
-./build_lamp
+./rm_lamp
 ./run_lamp
-./use_lamp

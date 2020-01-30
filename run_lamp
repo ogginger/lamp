@@ -1,3 +1,4 @@
 #!/bin/bash
 
 docker run -tid -v $(pwd)/html:/var/www/html -p 80:80 -p 2022:22 --name lamp lamp
+docker exec -it lamp bash service apache2 start
